@@ -19,7 +19,6 @@
                 <th width="100">e-mail</th>
                 <th width="120">phone number</th>
                 <th width="100">passpordID</th>
-                <th width="80">password</th>
                 <th width="180">address ID</th>
             </tr>
             <tr>
@@ -29,7 +28,6 @@
                 <td>${customer.email}</td>
                 <td>${customer.phoneNumber}</td>
                 <td>${customer.passportID}</td>
-                <td>${customer.password}</td>
                 <td>${customer.addressesId}</td>
             </tr>
         </table></p>
