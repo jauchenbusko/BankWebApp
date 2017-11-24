@@ -43,6 +43,7 @@
                     <th width="70">City</th>
                     <th width="120">Street</th>
                     <th width="30">Building</th>
+                    <th width="30">Apartment</th>
                     <th width="120">Post Code</th>
                 </tr>
                 <tr>
@@ -51,6 +52,7 @@
                     <td>${customer.address.city}</td>
                     <td>${customer.address.street}</td>
                     <td>${customer.address.building}</td>
+                    <td>${customer.address.apartment}</td>
                     <td>${customer.address.postCode}</td>
                 </tr>
             </table>

@@ -26,7 +26,7 @@ public class Address {
     private int building;
 
     @Column(name = "appartment")
-    private int appartment;
+    private int apartment;
 
     @Column(name = "post_code")
     private String postCode;
@@ -40,7 +40,7 @@ public class Address {
         this.city = city;
         this.street = street;
         this.building = building;
-        this.appartment = appartment;
+        this.apartment = appartment;
         this.postCode = postCode;
     }
 
@@ -92,12 +92,12 @@ public class Address {
         this.building = building;
     }
 
-    public int getAppartment() {
-        return appartment;
+    public int getApartment() {
+        return apartment;
     }
 
-    public void setAppartment(int appartment) {
-        this.appartment = appartment;
+    public void setApartment(int appartment) {
+        this.apartment = appartment;
     }
 
     public String getPostCode() {
@@ -117,7 +117,7 @@ public class Address {
 
         if (id != address.id) return false;
         if (building != address.building) return false;
-        if (appartment != address.appartment) return false;
+        if (apartment != address.apartment) return false;
         if (!country.equals(address.country)) return false;
         if (!region.equals(address.region)) return false;
         if (!city.equals(address.city)) return false;
