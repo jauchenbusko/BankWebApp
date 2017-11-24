@@ -43,7 +43,7 @@
                     <th width="70">City</th>
                     <th width="120">Street</th>
                     <th width="30">Building</th>
-                    <th width="50">Post Code</th>
+                    <th width="120">Post Code</th>
                 </tr>
                 <tr>
                     <td>${customer.address.country}</td>
