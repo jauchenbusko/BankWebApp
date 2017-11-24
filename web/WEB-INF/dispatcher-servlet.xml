@@ -46,10 +46,17 @@
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
     </bean>
 
+    <bean id="addressDAO" class="com.github.jauchenbusko.bankwebapp.dao.AddressDAOImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
     <bean id="customerService" class="com.github.jauchenbusko.bankwebapp.service.CustomerServiceImpl">
        <property name="customerDAO" ref="customerDAO"/>
     </bean>
 
+    <bean id="addressService" class="com.github.jauchenbusko.bankwebapp.service.AddressServiceImpl">
+        <property name="addressDAO" ref="addressDAO"/>
+    </bean>
 
     <context:component-scan base-package="com.github.jauchenbusko.bankwebapp" />
 

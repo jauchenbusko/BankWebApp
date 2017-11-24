@@ -1,6 +1,5 @@
 package com.github.jauchenbusko.bankwebapp.model;
 
-
 import org.hibernate.annotations.Proxy;
 
 import javax.persistence.*;
@@ -35,13 +34,13 @@ public class Customer {
 
    @OneToOne
    @JoinColumn(name = "addresses_id", nullable = false)
-   private Address addressesId;
+   private Address address;
 
 
     public Customer() {
     }
 
-    public Customer(int id, String name, String surname, String email, String passportID, int phoneNumber, String password) {
+    public Customer(int id, String name, String surname, String email, String passportID, int phoneNumber, String password, Address address) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -49,6 +48,7 @@ public class Customer {
         this.passportID = passportID;
         this.phoneNumber = phoneNumber;
         this.password = password;
+        this.address = address;
     }
 
     public int getId() {
@@ -107,12 +107,12 @@ public class Customer {
         this.password = password;
     }
 
-    public Address getAddressesId() {
-        return addressesId;
+    public Address getAddress() {
+        return address;
     }
 
-    public void setAddressesId(Address addressesId) {
-        this.addressesId = addressesId;
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     @Override
@@ -133,7 +133,7 @@ public class Customer {
 
     @Override
     public int hashCode() {
-        int result = (int) (id ^ (id >>> 32));
+        int result = id ^ (id >>> 32);
         result = 31 * result + email.hashCode();
         result = 31 * result + passportID.hashCode();
         return result;
