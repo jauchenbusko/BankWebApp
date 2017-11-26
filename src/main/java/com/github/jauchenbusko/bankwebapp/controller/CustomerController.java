@@ -1,6 +1,7 @@
 package com.github.jauchenbusko.bankwebapp.controller;
 
-import com.github.jauchenbusko.bankwebapp.service.CustomerService;
+
+import com.github.jauchenbusko.bankwebapp.model.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
